@@ -16,7 +16,23 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ĐỒ_THỊ());
+        }
+
+        public class DoThi
+        {
+            int Value1, Value2;
+            public DoThi(int value1, int value2)
+            {
+                Value1 = value1;
+                Value2 = value2;
+            }
+
+            public DoThi(int X)
+            {
+                Value1 = X;
+                Value2 = -1;
+            }
         }
     }
 }
