@@ -28,6 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.lbDinh = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.grBDoThi = new System.Windows.Forms.GroupBox();
+            this.grbDSCanh = new System.Windows.Forms.GroupBox();
+            this.lsvDSCanh = new System.Windows.Forms.ListView();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnBFS = new System.Windows.Forms.Button();
+            this.btnDFS = new System.Windows.Forms.Button();
+            this.btnDijkstra = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.lbCanh = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
+            this.grbDSCanh.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,7 +67,6 @@
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "MÔ PHỎNG ĐỒ THỊ";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbTitle.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbDinh
             // 
@@ -67,15 +84,6 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 2;
             // 
-            // lbCanh
-            // 
-            this.lbCanh.AutoSize = true;
-            this.lbCanh.Location = new System.Drawing.Point(16, 173);
-            this.lbCanh.Name = "lbCanh";
-            this.lbCanh.Size = new System.Drawing.Size(38, 16);
-            this.lbCanh.TabIndex = 3;
-            this.lbCanh.Text = "Cạnh";
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(60, 167);
@@ -85,7 +93,6 @@
             // 
             // grBDoThi
             // 
-            this.grBDoThi.Controls.Add(this.dateTimePicker1);
             this.grBDoThi.Dock = System.Windows.Forms.DockStyle.Right;
             this.grBDoThi.Location = new System.Drawing.Point(316, 80);
             this.grBDoThi.Name = "grBDoThi";
@@ -94,13 +101,6 @@
             this.grBDoThi.TabStop = false;
             this.grBDoThi.Text = "Đồ thị mô phỏng";
             this.grBDoThi.Paint += new System.Windows.Forms.PaintEventHandler(this.grBDoThi_Paint);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(353, 239);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 0;
             // 
             // grbDSCanh
             // 
@@ -122,16 +122,6 @@
             this.lsvDSCanh.TabIndex = 0;
             this.lsvDSCanh.UseCompatibleStateImageBehavior = false;
             this.lsvDSCanh.View = System.Windows.Forms.View.List;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(226, 166);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 7;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -171,9 +161,28 @@
             this.btnDijkstra.Text = "Dijkstra";
             this.btnDijkstra.UseVisualStyleBackColor = true;
             // 
-            // timer1
+            // btnThem
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btnThem.Location = new System.Drawing.Point(226, 166);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 7;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // lbCanh
+            // 
+            this.lbCanh.AutoSize = true;
+            this.lbCanh.Location = new System.Drawing.Point(16, 173);
+            this.lbCanh.Name = "lbCanh";
+            this.lbCanh.Size = new System.Drawing.Size(38, 16);
+            this.lbCanh.TabIndex = 3;
+            this.lbCanh.Text = "Cạnh";
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // ĐỒ_THỊ
             // 
@@ -197,7 +206,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.grBDoThi.ResumeLayout(false);
             this.grbDSCanh.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -217,11 +225,11 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.ListView lsvDSCanh;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        //private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnBFS;
         private System.Windows.Forms.Button btnDFS;
         private System.Windows.Forms.Button btnDijkstra;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

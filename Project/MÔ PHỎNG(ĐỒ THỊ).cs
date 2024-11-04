@@ -32,7 +32,7 @@ namespace Project
         {
             InitializeComponent();
             DoubleBuffered = true;
-            timer1.Interval = 1000;
+            timer2.Interval = 1000;
             
         }
 
@@ -55,10 +55,6 @@ namespace Project
             g.FillPolygon(pen.Brush, points);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -182,9 +178,10 @@ namespace Project
 
             bfsAlgo.Compute(1);
 
-            timer1.Start();
+            timer2.Start();
         }
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private void timer2_Tick(object sender, EventArgs e)
         {
             Graphics bufferGraphics = Graphics.FromImage(buffer);
             if (index < visited.Count)
@@ -197,16 +194,15 @@ namespace Project
                     g.DrawImage(buffer, 0, 0);
                 }
                 index++;
-            } 
+            }
             else
             {
                 this.Refresh();
-                timer1.Stop();
+                timer2.Stop();
                 buffer.Dispose();
                 bufferGraphics.Dispose();
                 index = 0;
             }
         }
-
     }
 }
