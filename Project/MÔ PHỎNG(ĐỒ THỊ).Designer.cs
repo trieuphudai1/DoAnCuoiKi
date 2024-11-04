@@ -28,27 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.lbDinh = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbCanh = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.grBDoThi = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.grbDSCanh = new System.Windows.Forms.GroupBox();
-            this.lsvDSCanh = new System.Windows.Forms.ListView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnBFS = new System.Windows.Forms.Button();
-            this.btnDFS = new System.Windows.Forms.Button();
-            this.btnDijkstra = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
-            this.grBDoThi.SuspendLayout();
-            this.grbDSCanh.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1

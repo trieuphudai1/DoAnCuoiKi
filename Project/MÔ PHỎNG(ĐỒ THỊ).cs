@@ -179,7 +179,7 @@ namespace Project
                 visited.Add(vertex);
 
             };
-           
+
             bfsAlgo.Compute(1);
 
             timer1.Start();
